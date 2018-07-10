@@ -31,7 +31,7 @@ html {
 }
 
 section {
-    padding: 80px 0;
+    padding: 80px 0; /*used to create space between sections*/
 }
 
 .box {
@@ -68,7 +68,7 @@ h3 {
     margin-bottom: 15px;
 }
 
-h2:after {
+h2:after { /*pseudo class that creates a nice line after h2*/
     display: block;
     height: 2px;
     background-color: #e67e22;
@@ -146,7 +146,7 @@ h2:after {
 /*--------------------------------------------------------*/
 
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); 
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -155,9 +155,9 @@ header {
 .hero-text-box {
     position: absolute;
     width: 1140px;
-    top: 50%;
+    top: 50%; /*moves the box on the page relative to its top left corner*/
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /*corrects for fact that top and left attr pertain to top left corner of box*/
 }
 
 .logo {
@@ -193,4 +193,30 @@ header {
 .main-nav li a:active {
     border-bottom: 2px solid #e67e22;
 
+}
+
+
+/*--------------------------------------------------------*/
+/* MEALS */
+/*--------------------------------------------------------*/
+
+.meals-showcase {
+    list-style: none; /*affects the bullet points*/
+    width: 100% /*makes this entire browser width*/
+}
+
+.meals-showcase li {
+    display: block; /*very important you'll notice were using it all the time*/
+    float: left; /* makes them side by side*/
+    width: 25%; /*list has 100% width, we want 4 elements side by side so each li element is 1/4*/
+}
+
+.meal-photo {
+    width: 100%; /*has full width of parent, which is meal-showcase li*/
+    margin: 0; /*overrides normalize.css margins*/
+}
+
+.meal-photo img {
+    width: 100%; /*ensures photo is as wide as container*/
+    height: auto;
 }
